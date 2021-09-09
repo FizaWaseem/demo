@@ -1,10 +1,10 @@
 import React from "react";
 import { Route} from "react-router";
-// import Header from "./component/header/header"
+import Header from "./component/header/header"
 const PublicRoute = ({ component: Component, isLoggedIn, ...rest }) => {
   return (
     <>
-    {/* <Header/> */}
+    <Header/>
   <Route {...rest} render={(props) => <Component {...props} />} />
  </> )
   ;

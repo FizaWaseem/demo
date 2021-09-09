@@ -12,8 +12,8 @@ const SearchStyle = makeStyles((theme) => ({
     boxShadow: "0 0 64px rgb(32 39 34 / 20%)",
   },
   btn: {
-    border: "2px solid #52bd2f",
-    color: "#52bd2f",
+    border: "2px solid #50a933",
+    color: "#50a933",
     borderRadius: "32px",
     padding: ".3rem",
     width: "100%",

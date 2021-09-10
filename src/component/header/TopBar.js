@@ -12,7 +12,6 @@ const TopBar = () => {
 
   return (
     <div className={root}>
-     
       <div className={TopbtnBar} id="appbar-collapse">
           <Grid xs={12} className={iconBar}>
         <CustomButton title=" Sell Artwork"/>

@@ -13,6 +13,7 @@ const CustomButton = ({component,onClick,to,title}) => {
           to={to}
           onClick={onClick}
           color="inherit"
+          size={"medium"}
         >
      {title}
         </Button>

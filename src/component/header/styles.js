@@ -7,7 +7,14 @@ const HeaderStyles = makeStyles((theme) => ({
     height: "20px",
     display:"flex",
     justifyContent:"space-between",
-    borderBottom:".1rem solid #e8e8e8"
+    borderBottom:".1rem solid #e8e8e8",
+    [theme.breakpoints.down("xs")]: {
+      height: "60px",
+      flexDirection:"column-reverse",
+      alignItems:"space-between",
+      justifyContent:"space-between",
+      marginTop:"3rem"
+    },
   },
   roots: {
     flexGrow: 1,
@@ -25,26 +32,29 @@ const HeaderStyles = makeStyles((theme) => ({
   logoImg: {
     margin: "10px 20px",
     width: "160px",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "120px",
     },
   },
   navigation: {
     backgroundColor: "white",
-    //   boxShadow: "none"
   },
-  toggleDrawer: {},
-  appTitle: {},
   root: {
     boxShadow: "none",
     marginLeft: "4rem",
+   
+  [theme.breakpoints.down("md")]: {
+    marginLeft: "2rem",
+  },
+  [theme.breakpoints.down("xs")]: {
+    marginLeft: "0rem",
+},
   },
   ArtworkText:{
    backgroundColor: "#50a933",
     color: "#fff",
     borderRadius: "32px",
     padding: ".4rem 1.2rem",
-    // width: "100%",
   },
   iconBar:{
     borderLeft:"1px solid #e8e8e8",
@@ -54,15 +64,13 @@ const HeaderStyles = makeStyles((theme) => ({
     padding:"0rem .5rem"
         },
   TopbtnBar: {
-    [theme.breakpoints.down("xs")]: {
-      display: "none",
-    },
+    // [theme.breakpoints.down("xs")]: {
+    //   display: "none",
+    // },
  
     display:"flex",
     margin: "10px",
     paddingLeft: "16px",
-    right: 0,
-    position: "relative",
     background: "transparent",
   },
   buttonBar: {
@@ -78,25 +86,37 @@ const HeaderStyles = makeStyles((theme) => ({
   buttonText: {
     textDecoration: "none",
     color: "#827f7f",
-    minWidth: "103px"
-    // "&.active": {
-    //   backgroundColor: "#fff",
-    //   color: "#ff7f47",
-    // },
+    minWidth: "103px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize:".9rem",
+      padding: "6px 2px",
+  },
+  },
+  NavText: {
+    textDecoration: "none",
+    color: "#827f7f",
+    minWidth: "103px",
+    
   },
   activeStyle: {
     textDecoration: "none",
     color: "#827f7f",
     minWidth: "103px",
     borderBottom:" 2px solid #50a933",
-    padding:".5rem"
+    padding:".5rem",
+    [theme.breakpoints.down("xs")]: {
+        padding:".5rem 0.2rem"
+    },
   },
   toggleStyle: {
     textDecoration: "none",
     color: "#827f7f",
     minWidth: "103px",
     borderBottom:" 2px solid #fff",
-    padding:".5rem",opacity:.5
+    padding:".5rem",opacity:.5,
+    [theme.breakpoints.down("xs")]: {
+        padding:".5rem 0.2rem"
+    },
   },
 }));
 

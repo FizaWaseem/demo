@@ -7,13 +7,21 @@ import CustomButton from "../../component/customButton";
 
 const Home = () => {
   const { root, contentDiv, searchDiv, searchContent,text2,text1,submitWork,famous,popularTxt ,designTxt} = HomeStyles();
-
+  const breadcrumbs = [
+    {
+      path: "/",
+      text: "Home",
+    },
+    {
+      path: "/GraphicDesign",
+      text: "Graphic Design",
+    },
+  ];
   return (
     <Grid>
       <Grid className={root}>
-       
         <Grid xs={8} className={contentDiv}>
-        <BreadCrumbs/>
+        <BreadCrumbs links={breadcrumbs}/>
           <Typography variant="h4" component="h6" className={text1}>
             Discover
           </Typography>

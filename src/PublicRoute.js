@@ -5,7 +5,8 @@ const PublicRoute = ({ component: Component, isLoggedIn, ...rest }) => {
   return (
     <>
     <Header/>
-  <Route {...rest} render={(props) => <Component {...props} />} />
+  <Route  {...rest} render={(props) => <Component {...props} />} />
+
  </> )
   ;
 };

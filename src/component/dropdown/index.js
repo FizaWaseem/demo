@@ -7,7 +7,14 @@ const styles = (theme) => ({
     color: "#827f7f",
     display:"contents",
     boxShadow: "none",
-    fontSize:"1rem"
+    fontSize:".9rem"
+  },
+  button: {
+   
+    [theme.breakpoints.only("sm")]: {
+      fontSize:".9rem",
+      padding: "6px 2px",
+  },
   },
 });
 
@@ -35,6 +42,7 @@ class DropDown extends React.Component {
           <Button
           onClick={this.handleMenu}
           color="inherit"
+          className={classes.button}
           endIcon={ <KeyboardArrowDownIcon
             direction="right"
             color= "#827f7f"

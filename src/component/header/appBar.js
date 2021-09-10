@@ -1,32 +1,39 @@
 import React from "react";
 import { Button, MenuItem } from "@material-ui/core";
-import ButtonAppBarCollapse from "./buttonbar";
+import ButtonAppBarCollapse from "./menuBar";
 import { NavLink } from "react-router-dom";
 import HeaderStyles from "./styles";
 import Dropdown from "../dropdown/index";
 const AppBarCollapse = () => {
-  const { root, buttonText, buttonBar } = HeaderStyles();
+  const { root, buttonText,NavText, buttonBar } = HeaderStyles();
   return (
     <div className={root}>
       <ButtonAppBarCollapse>
-        <NavLink className={buttonText} to="/">
+        <NavLink className={NavText} to="/">
           <MenuItem>Getting Started</MenuItem>
         </NavLink>
-        <NavLink className={buttonText} to="/listing-pages">
-          <MenuItem>My Work</MenuItem>
-        </NavLink>
-        <NavLink className={buttonText} to="/listing-pages">
-          <MenuItem>Explore</MenuItem>
-        </NavLink>
-        <NavLink className={buttonText} to="/listing-pages">
-          <MenuItem>Upload</MenuItem>
-        </NavLink>
-        <NavLink className={buttonText} to="/listing-pages">
-          <MenuItem>Community</MenuItem>
-        </NavLink>
-        <NavLink className={buttonText} to="/listing-pages">
-          <MenuItem>Help</MenuItem>
-        </NavLink>
+        <Dropdown name={"My Work"}>
+      <NavLink className={NavText} to="/MyWork"> 
+      <MenuItem>My Work</MenuItem>
+      </NavLink>
+          <MenuItem className={NavText}>Anything</MenuItem>
+        </Dropdown>
+        <Dropdown name={"Explore"}>
+          <MenuItem className={NavText} >XYZ</MenuItem>
+          <MenuItem className={NavText}>Work</MenuItem>
+        </Dropdown>
+        <Dropdown name={"Upload"}>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
+        </Dropdown>{" "}
+        <Dropdown name={"Community"}>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
+        </Dropdown>
+        <Dropdown name={"Help"}>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
+        </Dropdown>
       </ButtonAppBarCollapse>
       <div className={buttonBar} id="appbar-collapse">
         <Button
@@ -38,24 +45,26 @@ const AppBarCollapse = () => {
           Get Started
         </Button>
         <Dropdown name={"My Work"}>
-          <MenuItem className={buttonText} >ABS</MenuItem>
-          <MenuItem className={buttonText}>Anything</MenuItem>
+      <NavLink className={NavText} to="/MyWork"> 
+      <MenuItem>My Work</MenuItem>
+      </NavLink>
+          <MenuItem className={NavText}>Anything</MenuItem>
         </Dropdown>
         <Dropdown name={"Explore"}>
-          <MenuItem className={buttonText} >XYZ</MenuItem>
-          <MenuItem className={buttonText}>Work</MenuItem>
+          <MenuItem className={NavText} >XYZ</MenuItem>
+          <MenuItem className={NavText}>Work</MenuItem>
         </Dropdown>
         <Dropdown name={"Upload"}>
-          <MenuItem className={buttonText} >Getting Started</MenuItem>
-          <MenuItem className={buttonText}>My Work</MenuItem>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
         </Dropdown>{" "}
         <Dropdown name={"Community"}>
-          <MenuItem className={buttonText} >Getting Started</MenuItem>
-          <MenuItem className={buttonText}>My Work</MenuItem>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
         </Dropdown>
         <Dropdown name={"Help"}>
-          <MenuItem className={buttonText} >Getting Started</MenuItem>
-          <MenuItem className={buttonText}>My Work</MenuItem>
+          <MenuItem className={NavText} >Getting Started</MenuItem>
+          <MenuItem className={NavText}>My Work</MenuItem>
         </Dropdown>
         
       </div>
